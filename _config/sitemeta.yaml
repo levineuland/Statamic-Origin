@@ -11,10 +11,10 @@ _site_description: 'Default Meta Description'
 _keywords: 'keyword1, keyword2, keyword3'
 
 # Default Twitter ID (Include @)
-_twitter_id: ''
+_twitter_id: 
 
 # Default Google Plus URL (Full URL)
-_gplus_url: ''
+_gplus_url: 
 
 # Windows 8 Thumbnail BG Color
 _win_bg: '#ffffff'
@@ -23,19 +23,19 @@ _win_bg: '#ffffff'
 _site_type: 'website'
 
 # Google Analytics ID
-_ga_tag:''
+_ga_tag:
 
 # Google Webmaster Tools ID
-_gwt_tag:''
+_gwt_tag:
 
 # Bing Webmaster Tools ID
-_bing_tag:''
+_bing_tag:
 
 # Facebook Admin ID Tag
-_fb_admin:''
+_fb_admin:
 
 # Facebook App ID Tag
-_fb_app_id:''
+_fb_app_id:
 
 # Administrator Email Address
 _admin_email: 
