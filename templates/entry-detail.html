@@ -1,0 +1,9 @@
+<h1>{{ title }}</h1>
+{{ datestamp format="F jS, Y" }}
+{{ content }}
+{{ if categories }}
+  {{ categories_url_list }}
+{{ endif }}
+{{ if show_comments }}
+  {{ disqus:comments account="{ disqus_account }" }}
+{{ endif }}

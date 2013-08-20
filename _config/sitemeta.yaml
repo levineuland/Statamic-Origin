@@ -1,0 +1,41 @@
+# Company Name
+_company_name: Company Name
+
+# String to insert into title tag by default
+_title_modifier: 'Title Modifier'
+
+# Sitewide meta description
+_site_description: 'Default Meta Description'
+
+# Sitewide meta keywords
+_keywords: 'keyword1, keyword2, keyword3'
+
+# Default Twitter ID (Include @)
+_twitter_id: ''
+
+# Default Google Plus URL (Full URL)
+_gplus_url: ''
+
+# Windows 8 Thumbnail BG Color
+_win_bg: '#ffffff'
+
+# Type of website for OG meta tag
+_site_type: 'website'
+
+# Google Analytics ID
+_ga_tag:''
+
+# Google Webmaster Tools ID
+_gwt_tag:''
+
+# Bing Webmaster Tools ID
+_bing_tag:''
+
+# Facebook Admin ID Tag
+_fb_admin:''
+
+# Facebook App ID Tag
+_fb_app_id:''
+
+# Administrator Email Address
+_admin_email: 

@@ -1,0 +1,33 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {{ pages:listing folder="*" show_hidden="false" }}
+    {{ if status == "hidden" }}
+<url>
+        <loc>{{ _site_url }}{{ url }}</loc>
+        {{ if lastmod|not_empty }}
+        <lastmod>{{ lastmod }}</lastmod>
+        {{ endif }}
+        {{ if changefreq|not_empty }}
+        <changefreq>{{ changefreq }}</changefreq>
+        {{ endif }}
+        <priority>{{ if page_priority|not_empty }}{{ page_priority }}{{ else }}0.5{{ endif }}</priority>
+
+     </url>
+    {{ endif }}
+  {{ /pages:listing }}
+  {{ entries:listing folder="*" show_hidden="false" }}
+      {{ if status == "hidden" }}
+<url>
+
+          <loc>{{ _site_url }}{{ url }}</loc>
+          {{ if lastmod|not_empty }}
+          <lastmod>{{ lastmod }}</lastmod>
+          {{ endif }}
+          {{ if changefreq|not_empty }}
+          <changefreq>{{ changefreq }}</changefreq>
+          {{ endif }}
+          <priority>{{ if page_priority|not_empty }}{{ page_priority }}{{ else }}0.5{{ endif }}</priority>
+
+       </url>
+      {{ endif }}
+  {{ /entries:listing }}
+</urlset> 

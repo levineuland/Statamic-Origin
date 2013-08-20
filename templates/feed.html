@@ -1,0 +1,30 @@
+<rss version="2.0"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+  xmlns:admin="http://webns.net/mvcb/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<channel>
+
+  <title><![CDATA[{{ _site_name }} | {{ folder|title }}]]></title>
+  <link>{{ _site_url }}/{{ folder }}</link>
+  <description>{{ _site_name }} {{ folder }}</description>
+  <dc:language>{{ site_language }}</dc:language>
+  <dc:creator>{{ contact_email }}</dc:creator>
+  <dc:rights>Copyright {{ current_date format='Y' }}</dc:rights>
+  <dc:date>{{ current_date format="c" }}</dc:date>
+  <admin:generatorAgent rdf:resource="http://statamic.com/" />
+
+  {{ entries:listing folder="{{ folder }}" limit="20" }}
+  <item>
+    <title><![CDATA[{{ title }}]]></title>
+    <link>{{ permalink }}</link>
+    <guid>{{ permalink }}</guid>
+    <description><![CDATA[{{ content }}]]></description>
+    <dc:subject><![CDATA[{{ categories_list }}]]></dc:subject>
+    <dc:date>{{ datestamp format="c" }}</dc:date>
+  </item>
+  {{ /entries:listing }}
+
+</channel>
+</rss>

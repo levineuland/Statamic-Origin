@@ -1,0 +1,15 @@
+###########################################################################################
+#
+#  THEME VARIABLES
+#
+###########################################################################################
+
+# Theme name
+theme_name: origin
+
+# Toggle for including Share/Favicon/Social Images
+meta_images: true
+
+# Comments + Disqus
+disqus_account: changeme
+show_comments: no

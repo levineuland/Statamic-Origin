@@ -1,0 +1,16 @@
+<ul>
+  <li><a href="{{ homepage }}"{{ if !segment_1 }} class="current"{{ endif }}>Home</a></li>
+  {{ nav from="/" max_depth="2" }}
+    <li><a href="{{ url }}"{{ if is_current || is_parent }} class="current"{{ endif }}>{{ title }}</a>
+     {{ if is_current || is_parent }}
+       {{ if children }}
+        <ul>
+        {{ children }}
+          <li><a href="{{ url }}"{{ if is_current }} class="current"{{ endif }}>{{ title }}</a></li>
+        {{ /children }}
+        </ul>
+      {{ endif }}
+    {{ endif }}
+  </li>
+  {{ /nav }}
+</ul>
