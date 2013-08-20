@@ -1,7 +1,7 @@
 {{ entries:listing folder="entries" limit="10" }}
   <h2><a href="{{ url }}">{{ title }}</a></h2>
   {{ datestamp format="F jS, Y" }}
-  {{ if excerpt|not_empty }}{{ excerpt }}{{ else }}{{ content|truncate:200 }}{{ endif }}
+  {{ if excerpt }}{{ excerpt }}{{ else }}{{ content|truncate:200 }}{{ endif }}
   {{ if categories }}
     {{ categories_url_list }}
   {{ endif }}
