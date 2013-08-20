@@ -4,6 +4,5 @@ _layout: feed
 _template: sitemap
 _fieldset: page
 _type: rss
-status: hidden
 ---
 
