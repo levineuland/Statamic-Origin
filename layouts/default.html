@@ -5,10 +5,10 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  {{ if _gwt_tag|not_empty }}<meta name="google-site-verification" content="{{ _gwt_tag }}" />{{ endif }}
-  {{ if _bing_tag|not_empty }}<meta name="msvalidate.01" content="{{ _bing_tag }}" />{{ endif }}
-  {{ if _fb_admin|not_empty }}<meta property="fb:admins" content="{{ _fb_admin }}" />{{ endif }}
-  {{ if _fb_app_id|not_empty }}<meta property="fb:app_id" content="{{ _fb_app_id }}" />{{ endif }}
+  {{ if _gwt_tag }}<meta name="google-site-verification" content="{{ _gwt_tag }}" />{{ endif }}
+  {{ if _bing_tag }}<meta name="msvalidate.01" content="{{ _bing_tag }}" />{{ endif }}
+  {{ if _fb_admin }}<meta property="fb:admins" content="{{ _fb_admin }}" />{{ endif }}
+  {{ if _fb_app_id }}<meta property="fb:app_id" content="{{ _fb_app_id }}" />{{ endif }}
  
  {{ if meta_images !== false }}
 <!-- Icon Meta -->
@@ -22,33 +22,33 @@
   <link rel="apple-touch-icon-precomposed" href="{{ theme:img src="meta/apple-touch-icon-precomposed.png" }}" />
 
   <!-- Image Meta -->
-  <meta property="og:image" content="{{ _site_url }}{{ if social_image|not_empty }}{{ transform src="{ social_image }" width="200" height="200" action="smart" }}{{ else }}{{ theme:img src="meta/icon-facebook.png" }}{{ endif }}"/>
-  <meta name="twitter:image" content="{{ _site_url }}{{ if social_image|not_empty }}{{ transform src="{ social_image }" width="200" height="200" action="smart" }}{{ else }}{{ theme:img src="meta/icon-twitter.png" }}{{ endif }}">
+  <meta property="og:image" content="{{ _site_url }}{{ if social_image }}{{ transform src="{ social_image }" width="200" height="200" action="smart" }}{{ else }}{{ theme:img src="meta/icon-facebook.png" }}{{ endif }}"/>
+  <meta name="twitter:image" content="{{ _site_url }}{{ if social_image }}{{ transform src="{ social_image }" width="200" height="200" action="smart" }}{{ else }}{{ theme:img src="meta/icon-twitter.png" }}{{ endif }}">
   {{ endif }}
   <!-- Site Meta -->
-  <meta property="og:type" content="{{ if beta_page_type|not_empty}}{{ beta_page_type }}{{ else }}{{ _site_type }}{{ endif }}"/>
+  <meta property="og:type" content="{{ if beta_page_type}}{{ beta_page_type }}{{ else }}{{ _site_type }}{{ endif }}"/>
   <meta name="twitter:card" content="summary">
 
   <meta property="og:site_name" content="{{ _site_name }}"/>
-  <meta property="og:url" content="{{ if url|not_empty}}{{ _site_url }}{{ url }}{{ else }}{{ _site_url }}{{ endif }}"/>
+  <meta property="og:url" content="{{ if url}}{{ _site_url }}{{ url }}{{ else }}{{ _site_url }}{{ endif }}"/>
 
-  {{ if _twitter_id|not_empty }}<meta name="twitter:site" content="{{ _twitter_id }}">{{ endif }}
-  {{ if _gplus_url|not_empty }}<link rel="publisher" href="{{ _gplus_url }}"/>{{ endif }}
+  {{ if _twitter_id }}<meta name="twitter:site" content="{{ _twitter_id }}">{{ endif }}
+  {{ if _gplus_url }}<link rel="publisher" href="{{ _gplus_url }}"/>{{ endif }}
 
   <!-- Content Meta -->
-  {{ if _twitter_id|not_empty || author_twitter_id|not_empty }}<meta name="twitter:creator" content="{{ if author_twitter_id|not_empty }}{{ author_twitter_id }}{{ else }}{{ _twitter_id }}{{ endif }}">{{ endif }}
-  {{ if _gplus_url|not_empty || author_gplus_url|not_empty }}<link rel="author" href="{{ if author_gplus_url|not_empty }}{{ author_gplus_url }}{{ else }}{{ _gplus_url }}{{ endif }}"/>{{ endif }}
+  {{ if _twitter_id || author_twitter_id }}<meta name="twitter:creator" content="{{ if author_twitter_id }}{{ author_twitter_id }}{{ else }}{{ _twitter_id }}{{ endif }}">{{ endif }}
+  {{ if _gplus_url || author_gplus_url }}<link rel="author" href="{{ if author_gplus_url }}{{ author_gplus_url }}{{ else }}{{ _gplus_url }}{{ endif }}"/>{{ endif }}
 
-  <title>{{ if !segment_1 }}{{ _site_name }} - {{ if _title_modifier|not_empty }}{{ _title_modifier }}{{ else }}{{ _site_description }}{{ endif }}{{ elseif headline|not_empty }}{{ headline|striptags }} - {{ _site_name }}{{ else }}{{ title }} - {{ _site_name }}{{ endif }}</title>
-  <meta property="og:title" content="{{ if !segment_1 }}{{ _site_name }}{{ elseif headline|not_empty }}{{ headline }}{{ else }}{{ title }}{{ endif }}"/>
-  <meta name="twitter:title" content="{{ if !segment_1 }}{{ _site_name }}{{ elseif headline|not_empty }}{{ headline }}{{ else }}{{ title }}{{ endif }}">
+  <title>{{ if !segment_1 }}{{ _site_name }} - {{ if _title_modifier }}{{ _title_modifier }}{{ else }}{{ _site_description }}{{ endif }}{{ elseif headline }}{{ headline|striptags }} - {{ _site_name }}{{ else }}{{ title }} - {{ _site_name }}{{ endif }}</title>
+  <meta property="og:title" content="{{ if !segment_1 }}{{ _site_name }}{{ elseif headline }}{{ headline }}{{ else }}{{ title }}{{ endif }}"/>
+  <meta name="twitter:title" content="{{ if !segment_1 }}{{ _site_name }}{{ elseif headline }}{{ headline }}{{ else }}{{ title }}{{ endif }}">
 
 
-  <meta proerty="og:description" content="{{ if !segment_1 }}{{ _site_description }}{{ elseif excerpt|not_empty}}{{ excerpt }}{{ elseif content|not_empty }}{{ content|striptags|trim|widont|truncate:200|backspace:8 }}{{ else }}{{ _site_description }}{{ endif }}">
-  <meta name="twitter:description" content="{{ if !segment_1 }}{{ _site_description }}{{ elseif excerpt|not_empty}}{{ excerpt }}{{ elseif content|not_empty }}{{ content|striptags|trim|widont|truncate:200|backspace:8 }}{{ else }}{{ _site_description }}{{ endif }}">
-  <meta name="description" content="{{ if !segment_1 }}{{ _site_description }}{{ elseif excerpt|not_empty}}{{ excerpt }}{{ elseif content|not_empty }}{{ content|striptags|trim|widont|truncate:150|backspace:8 }}{{ else }}{{ _site_description }}{{ endif }}">
+  <meta proerty="og:description" content="{{ if !segment_1 }}{{ _site_description }}{{ elseif excerpt}}{{ excerpt }}{{ elseif content }}{{ content|striptags|trim|widont|truncate:200|backspace:8 }}{{ else }}{{ _site_description }}{{ endif }}">
+  <meta name="twitter:description" content="{{ if !segment_1 }}{{ _site_description }}{{ elseif excerpt}}{{ excerpt }}{{ elseif content }}{{ content|striptags|trim|widont|truncate:200|backspace:8 }}{{ else }}{{ _site_description }}{{ endif }}">
+  <meta name="description" content="{{ if !segment_1 }}{{ _site_description }}{{ elseif excerpt}}{{ excerpt }}{{ elseif content }}{{ content|striptags|trim|widont|truncate:150|backspace:8 }}{{ else }}{{ _site_description }}{{ endif }}">
 
-  {{ if _keywords|not_empty || keywords|not_empty }}<meta name="keywords" content="{{ _keywords }}{{ keywords }}" />{{ endif }}
+  {{ if _keywords || keywords }}<meta name="keywords" content="{{ _keywords }}{{ keywords }}" />{{ endif }}
   
 
   <!-- Viewport -->
@@ -61,12 +61,12 @@
   <script src="{{ theme:js }}"></script>
 
 </head>
-<body class='{{ if is_admin }}admin {{ endif }}{{ if logged_in }}logged-in {{ endif }}{{ if segment_1 }}{{segment_1}} {{ else }}home{{ endif }}{{ if segment_2 }}{{segment_2}} {{ endif }}{{ if segment_3 }}{{segment_3}} {{ endif }}{{ if segment_4 }}{{segment_4}} {{ endif }}{{ if url|not_empty && segment_1 }}{{ url|slugify }}-current{{ endif }}'>
+<body class='{{ if is_admin }}admin {{ endif }}{{ if logged_in }}logged-in {{ endif }}{{ if segment_1 }}{{segment_1}} {{ else }}home{{ endif }}{{ if segment_2 }}{{segment_2}} {{ endif }}{{ if segment_3 }}{{segment_3}} {{ endif }}{{ if segment_4 }}{{segment_4}} {{ endif }}{{ if url && segment_1 }}{{ url|slugify }}-current{{ endif }}'>
 {{ theme:partial src="header" }}
 {{ layout_content }}
 {{ theme:partial src="footer" }}
   
-  {{ if _ga_tag|not_empty && is_live == true }}
+  {{ if _ga_tag && is_live == true }}
     <script type="text/javascript">
 
     var _gaq = _gaq || [];
