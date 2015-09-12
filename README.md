@@ -16,7 +16,7 @@ Origin is a no-style theme for Statamic that gives you a foundation to help you 
 1. Clone the repo into the `_themes` directory of your Statamic site  
 2. Open your `_config/settings.yaml` file and point to the origin theme: `_theme: Statamic-Origin`  
 3. Copy the `Statamic-Origin/_config/sitemeta.yaml` file into your root `_config` folder
-4. Copy the `Statamic-Origin/_content/sitemap.md` file into your root `_content` folder  
+4. Copy the `Statamic-Origin/_content/_sitemap.md` file into your root `_content` folder  
 
 ---
 
